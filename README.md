@@ -11,7 +11,7 @@ To try out those scripts, you can also download and use one of the [RAW and DAT 
 ## Main features
 
 The MATLAB scripts allow to:
-  * `load_atis_data.m`: upload CD events to MATLAB
+  * [`load_atis_data.m`](load_atis_data.m): upload CD events to MATLAB
   * `load_atis_aps.m`: upload EM events to MATLAB (deprecated for the current sensor generation)
   * `load_ext_trigger_data.m`: upload data from external triggers to MATLAB
   * `play_cd_recording.m`: generate a video from CD events
@@ -48,6 +48,7 @@ cd_data = load_atis_data("/path/to/my_record.dat")
 The script `play_cd_recording.m` provides an example of generating a video from CD events and replaying this video.
 
 The function `play_cd_recording` requires the following input arguments:
+
     * `filename` - path to a DAT file with recorded CD events
     * `width` - width of the sensor
     * `height` - height of the sensor
