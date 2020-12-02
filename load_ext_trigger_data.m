@@ -64,7 +64,7 @@ idmask = hex2dec('FC00000');
 polshift=0; % bits to shift p to right
 idshift=26;
 
-addr=abs(allAddr); % make sure nonnegative or an error will result from bitand (glitches can somehow result in negative addressses...)
+addr=abs(allAddr); % make sure non-negative or an error will result from bitand (glitches can somehow result in negative addresses...)
 ext_trigger.p=-1+2*double(bitshift(bitand(addr,polmask),-polshift)); % 1 for ON, -1 for OFF
 ext_trigger.id=double(bitshift(bitand(addr,idmask),-idshift)); % id addresses
 end

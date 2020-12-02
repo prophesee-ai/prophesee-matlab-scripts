@@ -11,11 +11,11 @@ To try out those scripts, you can also download and use one of the [RAW and DAT 
 ## Main features
 
 The MATLAB scripts allow to:
-  * [`load_atis_data.m`](load_atis_data.m): uploads CD events to MATLAB
-  * [`load_atis_aps.m`](load_atis_aps.m): uploads EM events to MATLAB (deprecated for the current sensor generation)
+  * [`load_cd_events.m`](load_cd_events.m): uploads CD events to MATLAB
+  * [`load_em_events.m`](load_em_events.m): uploads EM events to MATLAB (deprecated for the current sensor generation)
   * [`load_ext_trigger_data.m`](load_ext_trigger_data.m): uploads data from external triggers to MATLAB
   * [`play_cd_recording.m`](play_cd_recording.m): generates a video from CD events
-  * [`atis_snapshot.m`](atis_snapshot.m): generates gray-scale images from EM events (deprecated for the current sensor generation)
+  * [`generate_em_snapshot.m`](generate_em_snapshot.m): generates gray-scale images from EM events (deprecated for the current sensor generation)
 
 Note that by default the provided scripts will attempt to upload the entire DAT files into memory. 
 Therefore, it will be useful to split your DAT file into several smaller files at first, or modify the Matlab scripts to limit the memory requirements.
@@ -24,9 +24,9 @@ Therefore, it will be useful to split your DAT file into several smaller files a
 ## Uploading CD data to MATLAB
 
 
-The script [`load_atis_data.m`](load_atis_data.m) provides an example of uploading CD events to MATLAB.
+The script [`load_cd_events.m`](load_cd_events.m) provides an example of uploading CD events to MATLAB.
 
-The function `load_atis_data` requires the following input arguments:
+The function `load_cd_events` requires the following input arguments:
   * path to DAT file with recorded CD events
   * flipX flag - for flipping data over the X axis (0 by default)
   * flipY flag - for flipping data over the Y axis (0 by default)
@@ -40,7 +40,7 @@ The script returns a data structure containing the following fields for every CD
 
 Example of script execution:
 ```
-cd_data = load_atis_data("/path/to/my_record.dat")
+cd_data = load_cd_events("/path/to/my_record.dat")
 ```
 
 ## Generating a video and frames from CD events
@@ -62,7 +62,7 @@ during 10 frames.
 
 For example, for a [Gen3 sensor](https://docs.prophesee.ai/hw/sensors/PPS3MVCD.html), the following command will generate a 25 FPS video with the accumulation time of 10000 µs:
 ```
-play_td_recording('/path/to/my_record.dat',640,480,25,10000)
+play_cd_recording('/path/to/my_record.dat',640,480,25,10000)
 ```
 
 ## Contact
