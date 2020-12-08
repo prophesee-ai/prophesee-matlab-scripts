@@ -24,7 +24,7 @@ end
 
 
 % Load data from the give file
-cd_data = load_atis_data(filename);
+cd_data = load_cd_events(filename);
 % Make the pixel index start at 1 for compatibility for Matlab matrices
 % indexes (in the files pixels coordinates start at 0)
 cd_data.x = cd_data.x + 1;
