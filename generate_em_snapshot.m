@@ -6,7 +6,7 @@ function img=generate_em_snapshot(em_data, start_time, duration, sx, sy)
 % for each pixel from 'start_time' and for 'duration' (all given in uS)
 %
 % 'sx' and 'sy' represent the size of the generated image and defaults to
-% the size of the sensor when non-specified
+% the size of the GEN1 sensor when non-specified
 
 if ~exist('sx','var')
     sx = 304;
