@@ -1,12 +1,12 @@
 # MATLAB scripts
 
 In this repo you will find some basic scripts to show how to work with data from Prophesee sensors in [MATLAB](https://www.mathworks.com/products/matlab.html).
-These scripts require a [DAT file](https://docs.prophesee.ai/data_formats/file_formats/dat.html) as an input with data recorded with [one of our cameras](https://docs.prophesee.ai/hw/index.html). 
+These scripts require a [DAT file](https://docs.prophesee.ai/stable/data_formats/file_formats/dat.html) as an input with data recorded with [one of our cameras](https://docs.prophesee.ai/stable/hw/evk/index.html). 
 
-If you only have a RAW file, you need to convert it to DAT format first. To this end, use our application [metavision_raw_to_dat](https://docs.prophesee.ai/metavision_sdk/modules/driver/guides/raw_to_dat.html)
+If you only have a RAW file, you need to convert it to DAT format first. To this end, use our application [metavision_raw_to_dat](https://docs.prophesee.ai/stable/metavision_sdk/modules/driver/guides/raw_to_dat.html#chapter-sdk-driver-samples-raw-to-dat)
 which is part of [Metavision Intelligence Suite](https://www.prophesee.ai/metavision-intelligence/).
 
-To try out those scripts, you can also download and use one of the [RAW and DAT files we provide](https://docs.prophesee.ai/datasets.html).
+To try out those scripts, you can also download and use one of the [RAW and DAT files we provide](https://docs.prophesee.ai/stable/datasets.html).
 
 ## Main features
 
@@ -60,7 +60,7 @@ accumulation time duration preceding the timestamp associated with the frame. Fo
 is 1000 FPS (frames per seconds) and the accumulation time is 10000 µs (microseconds), each CD event will be displayed
 during 10 frames.
 
-For example, for a [Gen3 sensor](https://docs.prophesee.ai/hw/sensors/PPS3MVCD.html), the following command will generate a 25 FPS video with the accumulation time of 10000 µs:
+For example, for a [Gen3 sensor](https://docs.prophesee.ai/stable/hw/sensors/PPS3MVCD.html), the following command will generate a 25 FPS video with the accumulation time of 10000 µs:
 ```
 play_cd_recording('/path/to/my_record.dat',640,480,25,10000)
 ```
